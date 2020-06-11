@@ -66,13 +66,13 @@ if __name__ in "__main__":
     # simulation parameters (time in seconds)
     # - pre_sim: duration of running network before turning plasticity on
     # - dt_rec: interval at which rates and weights are recorded
-    params.update({'duration': 20, 'dt': 0.001, 'pre_sim': 10, 'dt_rec': 0.001})
+    params.update({'duration': 20, 'dt': 0.001, 'pre_sim': 10, 'dt_rec': 0.01})
 
     # plasticity parameters
-    params.update({'plastic': True, 'tau_w': 300, 'tau_c': 5, 'eta': 10, 'kappa': 5})
+    params.update({'plastic': False, 'tau_w': 300, 'tau_c': 5, 'eta': 10, 'kappa': 5})
 
     # input parameters and initial rates
-    params.update({'stim_strength': 5, 'noise_strength': 0, 're_init': 5, 'ri_init': 5})
+    params.update({'stim_strength': 0.5, 'noise_strength': 0, 're_init': 5, 'ri_init': 5})
 
     # presynaptic inhibition parameters
     # - g_func determines the transfer function type: linear (0), exponential (1) or sigmoid (2)
